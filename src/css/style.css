@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate&display=swap");
+
+.container {
+	background-color: var(--darkMain);
+	color: var(--textWhite);
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.navbar__logo {
+	font-size: 32px;
+	font-family: "Syncopate", sans-serif;
+}
+
+.colorPaletteWrapper {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin-top: 0.5rem;
+	width: 100px;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	padding: 0.5rem;
+	background-color: var(--darkSecondary);
+}
+
+#a {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #1abc9c;
+	color: transparent;
+	cursor: pointer;
+}
+
+#b {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #e74c3c;
+	color: transparent;
+	cursor: pointer;
+}
+
+#c {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #95a5a6;
+	color: transparent;
+	cursor: pointer;
+}
+
+#d {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #f39c12;
+	color: transparent;
+	cursor: pointer;
+}
+
+#e {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #f1c40f;
+	color: transparent;
+	cursor: pointer;
+}
+
+#g {
+	flex: 1;
+	display: block;
+	border: 2px solid #fff;
+	background: #2b2b2b;
+	color: transparent;
+	cursor: pointer;
+}
+
+.color-box {
+	width: 50px;
+	height: 40px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+
+.change-background-button {
+	background-color: var(--darkSecondary);
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-size: 1rem;
+	transition: background-color 0.3s;
+}
+
+.change-background-button:hover {
+	background-color: var(--darkThird);
+}
+
+.content {
+	display: flex;
+	align-items: start;
+	padding: 1rem 0;
+	overflow-y: auto;
+	max-width: 100vw;
+	width: full;
+	flex: 1 1 0%;
+	gap: 1rem;
+}
+
+.create-column {
+	max-width: 300px;
+	min-width: 250px;
+	background-color: var(--darkSecondary);
+	width: 100%;
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+}
+
+.create-column__title {
+	display: block;
+	color: var(--textGray);
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	opacity: 70%;
+}
+
+.create-column__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.create-column__add {
+	background-color: var(--darkThird);
+	padding: 0.5rem 0.75rem;
+	color: var(--textWhite);
+	font-size: 1rem;
+	border-radius: 0.5rem;
+}
+
+.create-column__cancel {
+	background-color: var(--darkThird);
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	color: var(--textWhite);
+	font-size: 1rem;
+}
+
+.column {
+	background-color: var(--darkSecondary);
+	max-width: 300px;
+	min-width: 250px;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.column__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.75rem;
+}
+
+.column__options {
+	color: var(--textWhite);
+}
+
+.column__tasks {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.column__create-button {
+	background-color: var(--darkThird);
+	padding: 0.75rem;
+	color: var(--textWhite);
+	border-radius: 0.5rem;
+	margin-top: 1rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1rem;
+}
+
+.task {
+	background-color: var(--darkThird);
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.task__options {
+	color: var(--textWhite);
+}
+
+.task__title {
+	color: var(--textWhite);
+	font-size: 1rem;
+}
+
+.create-column-button {
+	background-color: var(--darkSecondary);
+	padding: 0.75rem;
+	color: var(--textWhite);
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1rem;
+	min-width: 250px;
+	max-width: 300px;
+}
+
+.hidden {
+	display: none;
+}

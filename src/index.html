@@ -7,116 +7,44 @@
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/colors.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+
+		<script
+			src="https://kit.fontawesome.com/e7fc9f162e.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+		<script src="./app.js" defer></script>
 	</head>
 
 	<body class="container">
 		<nav class="navbar">
-			<span class="navbar__logo">Get It Done</span>
-			<button
-				class="change-background-button"
-				onclick="toggleColorPalette()"
-			>
-				<span>Change Background</span>
-				<i class="fa-solid fa-palette"></i>
-			</button>
-			<div class="colorPaletteWrapper hidden">
-				<div onclick="handleColorPaletteClick(this)" id="a">
-					#1abc9c
-				</div>
-				<div onclick="handleColorPaletteClick(this)" id="b">
-					#e74c3c
-				</div>
-				<div onclick="handleColorPaletteClick(this)" id="c">
-					#95a5a6
-				</div>
-				<div onclick="handleColorPaletteClick(this)" id="d">
-					#f39c12
-				</div>
-				<div onclick="handleColorPaletteClick(this)" id="e">
-					#f1c40f
-				</div>
-				<div onclick="handleColorPaletteClick(this)" id="g">
-					#2b2b2b
-				</div>
+			<div class="color-picker">
+				<label for="colorPickerInput">
+					<i class="fa-solid fa-palette"></i> Background
+				</label>
+				<input type="color" id="colorPickerInput" />
 			</div>
 		</nav>
 
 		<main class="content">
-			<div class="column">
-				<div class="column__header">
-					<span class="column__title">Backlog</span>
-					<button class="column__options">
-						<i class="fa-solid fa-ellipsis"></i>
+			<div class="columns" id="columns"></div>
+			<div class="create-column hidden">
+				<input
+					id="create-column-input"
+					placeholder="Título da lista..."
+					class="create-column__input"
+				/>
+				<div class="create-column__buttons">
+					<button class="create-column__add">Adicionar lista</button>
+					<button class="create-column__cancel">
+						<i class="fa-solid fa-xmark"></i>
 					</button>
 				</div>
-				<section class="column__tasks">
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-				</section>
-				<button class="column__create-button">
-					<i class="fa-solid fa-plus"></i>
-					<span>Adicionar tarefa</span>
-				</button>
 			</div>
-			<div class="column">
-				<div class="column__header">
-					<span class="column__title">Backlog</span>
-					<button class="column__options">
-						<i class="fa-solid fa-ellipsis"></i>
-					</button>
-				</div>
-				<section class="column__tasks">
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-					<article class="task">
-						<span class="task__title">Título</span>
-						<button class="task__options">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
-					</article>
-				</section>
-				<button class="column__create-button">
-					<i class="fa-solid fa-plus"></i>
-					<span>Adicionar tarefa</span>
-				</button>
-			</div>
-
 			<button class="create-column-button">
 				<i class="fa-solid fa-plus"></i>
 				<span class="create-column-button__text">Adicionar lista</span>
 			</button>
 		</main>
-
-		<script
-			src="https://kit.fontawesome.com/e7fc9f162e.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="./js/main.js"></script>
 	</body>
 </html>

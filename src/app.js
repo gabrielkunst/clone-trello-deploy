@@ -14,24 +14,36 @@ window.app = {
 // FUNÇÕES DE ACESSO AO LOCALSTORAGE
 // FUNÇÃO QUE PEGA UM ITEM DO LOCALSTORAGE
 function getFromLocalStorage(localStorageKey) {
-	console.log(`Fetching ${localStorageKey} from localStorage`);
-	const dataFromLocalStorage = localStorage.getItem(localStorageKey);
-	console.log(
-		"The data returned from localStorage is ",
-		dataFromLocalStorage
-	);
-	if (dataFromLocalStorage) {
-		const dataAsJson = JSON.parse(dataFromLocalStorage);
-		return dataAsJson;
+	try {
+		console.log(`Fetching ${localStorageKey} from localStorage`);
+		const dataFromLocalStorage = localStorage.getItem(localStorageKey);
+		console.log(
+			"The data returned from localStorage is ",
+			dataFromLocalStorage
+		);
+		if (dataFromLocalStorage) {
+			const dataAsJson = JSON.parse(dataFromLocalStorage);
+			return dataAsJson;
+		}
+	} catch (error) {
+		console.log(
+			`Error while fetching ${localStorageKey} from localStorage, setting null instead`
+		);
+		console.error(error);
+		return null;
 	}
-	return null;
 }
 
 // FUNÇÃO QUE ATUALIZA UM ITEM DO LOCALSTORAGE
 function updateLocalStorage(localStorageKey, data) {
-	console.log(`Setting ${localStorageKey} key as `, data);
-	const dataAsJson = JSON.stringify(data);
-	localStorage.setItem(localStorageKey, dataAsJson);
+	try {
+		console.log(`Setting ${localStorageKey} key as `, data);
+		const dataAsJson = JSON.stringify(data);
+		localStorage.setItem(localStorageKey, dataAsJson);
+	} catch (error) {
+		console.error(error);
+		alert(`Erro ao salvar ${localStorageKey} no localStorage`);
+	}
 }
 
 // FUNÇÕES DE CARREGAMENTO DE DADOS
@@ -186,7 +198,7 @@ function handleTaskDropByDrag(event) {
 		renderColumns();
 	} catch (error) {
 		alert("Erro ao mover tarefa");
-		console.log(error);
+		console.error(error);
 	}
 }
 

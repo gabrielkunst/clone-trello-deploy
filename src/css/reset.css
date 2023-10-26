@@ -141,6 +141,7 @@ button {
 button,
 input,
 textarea,
+span,
 label {
 	font-family: "Poppins", sans-serif;
 }
